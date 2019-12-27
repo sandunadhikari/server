@@ -5,10 +5,10 @@ var io = require('socket.io')(server);
 
 var light = {state: false};
 
-// app.use(express.static(__dirname + '/node_modules'));
-// app.get('/', function (req, res, next) {
-//   res.sendFile(__dirname + '/index.html');
-// });
+ app.use(express.static(__dirname + '/node_modules'));
+ app.get('/', function (req, res, next) {
+   res.send({ hello: 'world' });
+ });
 
 io.on('connection', function (client) {
   console.log('Client connected...');
