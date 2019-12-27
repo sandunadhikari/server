@@ -29,6 +29,9 @@ io.on('connection', function (client) {
   });
 });
 
-server.listen(4200, () => {
-  console.log('Server is up and running on port 4200')
-});
+// server.listen(4200, () => {
+//   console.log('Server is up and running on port 4200')
+// });
+server.listen(process.env.PORT || 4200, function() {
+  console.log('Server is up and running on port 4200');
+})
