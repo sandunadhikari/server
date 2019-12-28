@@ -7,7 +7,7 @@ var light = {state: false};
 
  app.use(express.static(__dirname + '/node_modules'));
  app.get('/', function (req, res, next) {
-   res.send({ hello: 'world' });
+   res.send({ hello: light });
  });
 
 io.on('connection', function (client) {
